@@ -1,0 +1,225 @@
+@font-face {
+  font-family: ShaftFont;
+  src: url("./helvetica-now-text-regular.otf") format("opentype");
+}
+
+body {
+  font-family: ShaftFont;
+  font-size: 1rem;
+  background-color: #fefefe;
+  line-height: 1.5;
+  margin: auto;
+}
+
+.body-modal {
+  background: url("./shaft-16.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+#section-2 {
+  overflow: auto;
+  padding: 3rem;
+}
+
+a {
+  text-decoration: none;
+  color: #4e4011;
+}
+
+#section-1 {
+  overflow: auto;
+  text-align: center;
+  justify-content: space-between;
+  height: 100vh;
+  max-height: 1080px;
+  display: flex;
+}
+
+.section-1-right {
+  height: 100%;
+  width: 100%;
+  background-color: #cccccc;
+  background-size: 100%;
+  background-position: center center;
+  background: url("./shaft-13.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.social {
+  display: flex;
+  justify-content: flex-end;
+  width: -moz-calc(100% - 15px);
+  width: -webkit-calc(100% - 15px);
+  width: calc(100% - 15px);
+  margin-top: 20px;
+}
+
+.social-link {
+  padding: 5px;
+  font-size: 32px;
+}
+
+.section-1-left {
+  width: 800px;
+  background-color: #031833;
+  color: #eeeced;
+  text-align: center;
+  vertical-align: middle;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-1-copy {
+  padding: 10px;
+  color: #d1a11b;
+  font-size: 62px;
+  width: 100%;
+}
+.section-1-left > p {
+  padding-top: 10px;
+  width: 100%;
+}
+
+#age-verification-modal {
+  border-radius: 25px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 300px;
+  margin-left: -200px;
+  margin-top: -150px;
+  background-color: #031833;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  transform: translateY(45px);
+  color: #eeeced;
+  text-align: center;
+  vertical-align: middle;
+  padding-bottom: 20px;
+}
+
+#age-verification-modal > button.no-button {
+  background-color: #031833;
+  color: white;
+}
+
+#age-verification-modal > button.no-button:hover {
+  background-color: #d1a11b;
+  border: 2px solid #d1a11b;
+  color: black;
+}
+
+#age-verification-modal > button:hover {
+  background-color: #d1a11b;
+  border: 2px solid #d1a11b;
+  color: black;
+}
+
+#age-verification-modal > button {
+  transition: 0.3s;
+  width: 100px;
+  margin: auto;
+  border: 2px solid #eeeced;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px 10px 10px 10px;
+  color: black;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+}
+
+#mc-embedded-subscribe {
+  transition: 0.3s;
+  width: 100px;
+  margin: auto;
+  border: 2px solid #eeeced;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px 10px 10px 10px;
+  color: black;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.age-verification-logo {
+  padding-top: 20px;
+  color: #d1a11b;
+  padding-bottom: 10px;
+  font-size: 62px;
+  width: 100%;
+}
+
+/* responsiveness hacks */
+/* @media only screen and (max-width: 1450px) {
+  #section-1 {
+    max-height: none; 
+    flex-direction: column-reverse;
+  }
+  .section-1-left {
+    width: 100%;
+    height: 1500px;
+  }
+
+  .section-1-right { 
+    height: 100%;
+  }
+} */
+
+/*  ipad */
+@media only screen and (max-width: 1023px) {
+  #section-1 {
+    flex-direction: column-reverse;
+  }
+  .section-1-left {
+    width: 100%;
+    height: 50%;
+  }
+
+  .section-1-right {
+    height: 100%;
+  }
+}
+
+/*  phone */
+@media only screen and (max-width: 500px) {
+  #section-1 {
+    flex-direction: column-reverse;
+  }
+  .section-1-left {
+    width: 100%;
+    height: 80%;
+  }
+
+  .section-1-right {
+    height: 100%;
+    background-size: contain;
+  }
+
+  #age-verification-modal {
+    width: 300px;
+    margin-left: -150px;
+  }
+}
+
+/* another hack https://stackoverflow.com/questions/23772673/hidden-property-does-not-work-with-flex-box */
+#age-verification-modal[hidden] {
+  display: none;
+}
